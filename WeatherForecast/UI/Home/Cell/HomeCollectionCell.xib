@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="HomeCollectionCell" customModule="WeatherForecast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="137"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="437" height="137"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rR-KL-I2K">
+                        <rect key="frame" x="16" y="10" width="119" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgx-HB-5fC">
+                        <rect key="frame" x="16" y="41" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL3-oc-ifa">
+                        <rect key="frame" x="16" y="51" width="87.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibZ-zc-XP3">
+                        <rect key="frame" x="16" y="79" width="0.0" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryL-fg-1HU">
+                        <rect key="frame" x="16" y="136" width="405" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="eHd-t5-xdH"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-L6-vHy">
+                        <rect key="frame" x="376" y="10" width="45" height="30"/>
+                        <state key="normal" title="Delete"/>
+                        <connections>
+                            <action selector="deleteButtonDidTap:" destination="gTV-IL-0wX" eventType="touchUpInside" id="C4w-5s-znd"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Fgx-HB-5fC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="3ON-vX-l4y"/>
+                <constraint firstItem="vL3-oc-ifa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="3P8-Rh-waL"/>
+                <constraint firstItem="0rR-KL-I2K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="3xl-Fp-RyB"/>
+                <constraint firstItem="HuZ-L6-vHy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="5gr-WD-BLw"/>
+                <constraint firstItem="vL3-oc-ifa" firstAttribute="top" secondItem="Fgx-HB-5fC" secondAttribute="bottom" constant="10" id="6Vc-TC-fNz"/>
+                <constraint firstAttribute="bottom" secondItem="ryL-fg-1HU" secondAttribute="bottom" id="FSc-95-bD2"/>
+                <constraint firstItem="ibZ-zc-XP3" firstAttribute="top" secondItem="vL3-oc-ifa" secondAttribute="bottom" constant="10" id="GRR-jm-qFQ"/>
+                <constraint firstAttribute="trailing" secondItem="HuZ-L6-vHy" secondAttribute="trailing" constant="16" id="Gkz-XV-WLp"/>
+                <constraint firstItem="0rR-KL-I2K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="OVM-SW-RwY"/>
+                <constraint firstAttribute="bottom" secondItem="ibZ-zc-XP3" secondAttribute="bottom" constant="10" id="SQa-hV-pmy"/>
+                <constraint firstItem="ryL-fg-1HU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Tap-9J-0vP"/>
+                <constraint firstAttribute="trailing" secondItem="ryL-fg-1HU" secondAttribute="trailing" constant="16" id="XDe-af-2Yh"/>
+                <constraint firstItem="ibZ-zc-XP3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Ygr-bf-RXB"/>
+                <constraint firstItem="Fgx-HB-5fC" firstAttribute="top" secondItem="0rR-KL-I2K" secondAttribute="bottom" constant="10" id="hkg-ce-bJk"/>
+            </constraints>
+            <size key="customSize" width="437" height="137"/>
+            <connections>
+                <outlet property="coordinateLabel" destination="ibZ-zc-XP3" id="CNV-KH-Ae3"/>
+                <outlet property="name" destination="Fgx-HB-5fC" id="AiJ-nT-bZY"/>
+            </connections>
+            <point key="canvasLocation" x="325.36231884057975" y="132.92410714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

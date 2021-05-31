@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mhF-mt-SMo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="Vbq-O1-bxb">
+            <objects>
+                <navigationController id="mhF-mt-SMo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="ITo-3d-9jQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2a5-NZ-oy6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="S8Z-Cg-i8S" kind="relationship" relationship="rootViewController" id="b3W-6A-zoB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vb2-Fd-l9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-649" y="88"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="7o8-xS-IDe">
+            <objects>
+                <viewController id="S8Z-Cg-i8S" customClass="HomeViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eWQ-I6-pgv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpq-Zo-PpA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="290"/>
+                            </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="O5i-cg-90U">
+                                <rect key="frame" x="0.0" y="378" width="414" height="435"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f7b-Zo-XDC">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4do-1s-CGi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kpq-Zo-PpA" firstAttribute="leading" secondItem="O5i-cg-90U" secondAttribute="trailing" id="0q2-B9-ag0"/>
+                            <constraint firstAttribute="trailing" secondItem="kpq-Zo-PpA" secondAttribute="trailing" id="6nB-7H-P23"/>
+                            <constraint firstItem="O5i-cg-90U" firstAttribute="top" secondItem="4do-1s-CGi" secondAttribute="top" id="CRs-iw-RXu"/>
+                            <constraint firstItem="kpq-Zo-PpA" firstAttribute="height" secondItem="4do-1s-CGi" secondAttribute="height" multiplier="0.4" id="FDP-xn-PIL"/>
+                            <constraint firstItem="O5i-cg-90U" firstAttribute="bottom" secondItem="4do-1s-CGi" secondAttribute="bottom" id="OLQ-tY-CEy"/>
+                            <constraint firstItem="kpq-Zo-PpA" firstAttribute="width" secondItem="eWQ-I6-pgv" secondAttribute="width" multiplier="0.5" id="QGN-M5-Uo6"/>
+                            <constraint firstItem="kpq-Zo-PpA" firstAttribute="bottom" secondItem="4do-1s-CGi" secondAttribute="bottom" id="VYB-Nd-jz8"/>
+                            <constraint firstItem="O5i-cg-90U" firstAttribute="trailing" secondItem="4do-1s-CGi" secondAttribute="trailing" id="Ypq-34-zfH"/>
+                            <constraint firstItem="O5i-cg-90U" firstAttribute="leading" secondItem="eWQ-I6-pgv" secondAttribute="leading" id="fYY-ez-UAi"/>
+                            <constraint firstItem="O5i-cg-90U" firstAttribute="bottom" secondItem="4do-1s-CGi" secondAttribute="bottom" id="gIg-hs-7M5"/>
+                            <constraint firstItem="kpq-Zo-PpA" firstAttribute="top" secondItem="4do-1s-CGi" secondAttribute="top" id="hPd-wd-IGx"/>
+                            <constraint firstItem="4do-1s-CGi" firstAttribute="trailing" secondItem="kpq-Zo-PpA" secondAttribute="trailing" id="jGE-gp-7Xr"/>
+                            <constraint firstItem="O5i-cg-90U" firstAttribute="top" secondItem="kpq-Zo-PpA" secondAttribute="bottom" id="oy7-h3-C7K"/>
+                            <constraint firstItem="kpq-Zo-PpA" firstAttribute="leading" secondItem="4do-1s-CGi" secondAttribute="leading" id="qeq-wY-fJC"/>
+                            <constraint firstItem="O5i-cg-90U" firstAttribute="leading" secondItem="4do-1s-CGi" secondAttribute="leading" id="qoo-ig-QSc"/>
+                            <constraint firstItem="kpq-Zo-PpA" firstAttribute="top" secondItem="4do-1s-CGi" secondAttribute="top" id="yRw-eN-dnS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CRs-iw-RXu"/>
+                                <exclude reference="fYY-ez-UAi"/>
+                                <exclude reference="gIg-hs-7M5"/>
+                                <exclude reference="0q2-B9-ag0"/>
+                                <exclude reference="6nB-7H-P23"/>
+                                <exclude reference="QGN-M5-Uo6"/>
+                                <exclude reference="VYB-Nd-jz8"/>
+                                <exclude reference="yRw-eN-dnS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="jGE-gp-7Xr"/>
+                                <include reference="CRs-iw-RXu"/>
+                                <exclude reference="OLQ-tY-CEy"/>
+                                <exclude reference="Ypq-34-zfH"/>
+                                <include reference="fYY-ez-UAi"/>
+                                <include reference="gIg-hs-7M5"/>
+                                <exclude reference="oy7-h3-C7K"/>
+                                <exclude reference="qoo-ig-QSc"/>
+                                <include reference="0q2-B9-ag0"/>
+                                <include reference="6nB-7H-P23"/>
+                                <exclude reference="FDP-xn-PIL"/>
+                                <include reference="QGN-M5-Uo6"/>
+                                <include reference="VYB-Nd-jz8"/>
+                                <exclude reference="hPd-wd-IGx"/>
+                                <exclude reference="qeq-wY-fJC"/>
+                                <include reference="yRw-eN-dnS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="tK0-dM-7TX"/>
+                    <connections>
+                        <outlet property="collectionView" destination="O5i-cg-90U" id="bT3-vg-CEa"/>
+                        <outlet property="mapView" destination="kpq-Zo-PpA" id="reD-On-zXv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57b-t9-iLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.13392857142857" y="85.507246376811594"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
